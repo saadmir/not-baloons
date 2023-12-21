@@ -16,7 +16,8 @@ const isCollide = (a: tBoundingBox, b: tBoundingBox) => !(
 )
 
 export default () => {
-  const { 
+  const {
+    inRound, 
     startRound, 
     loonStates, 
     dartBBoxes, 
@@ -75,7 +76,7 @@ export default () => {
 
   return (
     <>
-      <button onClick={e => { loonRefs.current = {}; startRound(); }}>Start Round</button>
+      <button disabled={inRound} onClick={e => { loonRefs.current = {}; startRound(); }}>Start Round</button>
       <br />
       <div>
         <svg viewBox={`0 -10 ${CANVAS_WIDTH} ${CANVAS_HEIGHT}`} width={`${CANVAS_WIDTH}`} height={`${CANVAS_HEIGHT}`} ref={svgRef}>

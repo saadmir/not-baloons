@@ -41,4 +41,5 @@ type tGameContext = {
   scores: tScores,
   popped: string[],
   setPopped: (loonIds: string[]) => void
+  inRound: boolean
 }

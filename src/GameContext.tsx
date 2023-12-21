@@ -10,6 +10,7 @@ export default ({ children }: { children: ReactNode}) => {
   const [score, setScore] = useState<number>(0)
   const [scores, setScores] = useState<tScores>({})
   const [popped, setPopped] = useState([])
+  const [inRound, setInRound] = useState(false)
   const ws = useRef<WebSocket| null>(null)
 
   useEffect(() => {
@@ -21,6 +22,7 @@ export default ({ children }: { children: ReactNode}) => {
     setRound(round + 1)
     setScore(0)
     setPopped([])
+    setInRound(false)
   }, [endOfRound]);
 
   const popLoon = (loonId: string) => {
@@ -32,7 +34,7 @@ export default ({ children }: { children: ReactNode}) => {
   return (
     <GameContext.Provider value={{
       endOfRound,
-      startRound,
+      startRound: () => { setInRound(true); startRound(); },
       loonStates,
       dartBBoxes,
       setDartBBoxes,
@@ -42,6 +44,7 @@ export default ({ children }: { children: ReactNode}) => {
       scores,
       popped,
       setPopped,
+      inRound,
     }}>
       {children}
     </GameContext.Provider>
