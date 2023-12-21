@@ -1,7 +1,11 @@
-## Blue rectangles are draggable `Turrets`, once dragged and placed on board, each `Turret` shoots 4 bullets from each side.
-### Bloons which come in range of a bullet are popped
-## Click on `Start Round` to start a round.
-## Score at end of each round is appended at the bottom
+**Blue rectangles are draggable `Turrets`, once dragged and placed on board, each `Turret` shoots 4 bullets from each side.**
+
+**Bloons which come in range of a bullet are popped**
+
+**Click on `Start Round` to start a round.**
+
+**Score at end of each round is appended at the bottom**
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
