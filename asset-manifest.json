@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/not-bloons/static/css/main.64c90942.css",
+    "main.js": "/not-bloons/static/js/main.8c601e0d.js",
+    "index.html": "/not-bloons/index.html",
+    "main.64c90942.css.map": "/not-bloons/static/css/main.64c90942.css.map",
+    "main.8c601e0d.js.map": "/not-bloons/static/js/main.8c601e0d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.64c90942.css",
+    "static/js/main.8c601e0d.js"
+  ]
+}
